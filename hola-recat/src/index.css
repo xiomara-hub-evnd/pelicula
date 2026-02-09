@@ -1,0 +1,256 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+
+  --fondo-principal: #0f172a;
+  --texto-blanco: #f8fafc;
+  --rojo-alerta: #ef4444;   
+  --verde-exito: #22c55e;
+  --azul-neon: #3b82f6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--fondo-principal);
+  color: var(--texto-blanco);
+  min-height: 100vh;
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--azul-neon);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 40px;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.containerCatalogo {
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.containerCatalogo:hover {
+  transform: translateY(-5px);
+}
+
+.baja-puntuacion {
+  background: linear-gradient(145deg, #ff0000, var(--rojo-alerta));
+  padding: 0px 0px 20px 0px;
+}
+
+.alta-puntuacion {
+  background: linear-gradient(145deg, #00ff66, var(--verde-exito));
+  padding: 0px 0px 20px 0px;
+}
+
+.containerImgcatalogo {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.containerImgcatalogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardinfocatalogo {
+  text-align: center;
+  width: 100%;
+}
+
+.cardinfocatalogo h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.2rem;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoria {
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.rating-box {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+button {
+  background-color: white;
+  color: #0f172a;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 80%;
+}
+
+button:hover {
+  background-color: var(--azul-neon);
+  color: white;
+}
+
+/*:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.containerProducto{
+  display:flex;
+flex-direction: column;
+background-color:rgb(185, 73, 176);
+width: 600px;
+height: 500px;
+justify-content: space-evenly;
+margin: 10px;
+align-items: center;
+border-radius: 50%;
+}
+
+.cardInfo{
+  color:#ffffff;
+  font-size: larger;
+
+}
+.cardInfo h3{
+  font-size: xx-large;
+}
+
+.maincontainer{
+  display:flex;
+  flex-direction: column;
+}
+
+.catalogo{
+  display: flex;
+  flex-direction: row;
+}
+
+.containerImg{
+  width: 150px;
+  height:150px ;
+  display: flex;
+}
+
+.containerImg img{
+max-width: 100%;
+object-fit: cover;
+border-radius: 10%;
+  flex-direction: row-reverse;
+
+
+.div .containerCatalogo{
+  display: flex;
+  flex-direction: column;
+}
+.containerCatalogo{
+  display: flex;
+  margin: 30%;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  justify-content: space-evenly;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+*/
