@@ -60,6 +60,8 @@ import Catalogo from "./Catalogo"
 import hambre from './assets/pelicula1.jpg'
 import harry from './assets/pelicula2.jpg'
 import familia from './assets/pelicula3.jpg'
+import Layout from './assets/Layout';
+
 
 function App() {
   const [totalRentadas, setTotalRentadas] = useState(0);
@@ -95,5 +97,15 @@ function App() {
         ))}
       </div>
     </div >)
+    // En tu App.jsx
+
+function App() {
+  return (
+    <Layout>
+       {/* Aquí va el resto de tu contenido */}
+       <Catalogo />
+    </Layout>
+  )
+}
 }
 export default App
