@@ -70,7 +70,7 @@ function App() {
 
   const catalogo = [
     { id: 1, nombre: "Los Juegos del Hambre ", categoria: "Ciencia Ficción", rating: 2, imagen: hambre },
-   
+    { id: 2, nombre: "Harry Potter", categoria: "Fantasía", rating: 3, imagen: harry },
     { id: 3, nombre: "La Familia del Futuro", categoria: "Animada", rating: 5, imagen: familia },
   ]
 
