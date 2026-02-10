@@ -1,4 +1,4 @@
-import Boton from "./boton"
+import Boton from "./Boton"
 
 function Catalogo({ nombre, categoria, rating, imagen, manejarRenta }) {
     const estiloDinamico = rating < 3 ? "baja-puntuacion" : "alta-puntuacion";
