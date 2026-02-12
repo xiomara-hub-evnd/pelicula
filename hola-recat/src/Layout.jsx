@@ -1,16 +1,16 @@
+import { Link } from 'react-router-dom'; 
+import "./index.css"; 
+
+// Asegúrate de importar SearchBar si lo usas aquí, o bórralo si está en App.jsx
+
 export default function Layout({ children }) {
   return (
     <div className="min-h-screen"> 
       <nav>
-        {/* Agrupamos los enlaces en un div para que queden a la izquierda */}
         <div className="nav-links">
-            <a href="/">Inicio</a>
-            <a href="/catalogo">Ver Películas</a>
+            <Link to="/">Inicio</Link>
+            <Link to="/catalogo">Ver Películas</Link>
         </div>
-        
-        {/* Aquí iría el SearchBar si decides ponerlo en el Navbar fijo, 
-            pero como lo tienes en App.jsx, se verá debajo del nav. 
-            ¡Si quieres que esté DENTRO del nav, avísame! */}
       </nav>
       {children}
     </div>

@@ -54,17 +54,19 @@ function App() {
   </div >)
 }
 */
-import { useState } from 'react' 
+import { useState } from 'react'
 import Catalogo from "./Catalogo"
+import Layout from './Layout';
+import SearchBar from './Componentes/searchBar';
+
+// Importamos las imágenes
 import hambre from './assets/pelicula1.jpg'
 import harry from './assets/pelicula2.jpg'
 import familia from './assets/pelicula3.jpg'
-import Layout from './Layout'; 
-import SearchBar from './Componentes/searchBar'; 
-import './App.css';
 
 function App() {
   const [totalRentadas, setTotalRentadas] = useState(0);
+
   const [busqueda, setBusqueda] = useState("");
 
   const aumentarTotal = () => {
@@ -81,23 +83,25 @@ function App() {
     { id: 3, nombre: "La Familia del Futuro", categoria: "Animada", rating: 5, imagen: familia },
   ]
 
-  const peliculasFiltradas = catalogo.filter((peli) => 
+  const peliculasFiltradas = catalogo.filter((peli) =>
     peli.nombre.toLowerCase().includes(busqueda.toLowerCase())
   );
 
   return (
     <Layout>
-      <h1>Lo más buscado</h1>
-      
-      <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
-        <SearchBar onSearch={manejarBusqueda} />
-      </div>
+      <div className="main-content" style={{ padding: '20px' }}>
 
-      <h2 style={{textAlign: 'center', color: 'white'}}>
-        Películas rentadas: {totalRentadas}
-      </h2>
+        <h1 style={{ textAlign: 'center', color: 'white' }}>Lo más buscado</h1>
 
-      <div className='catalogo'>
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
+          <SearchBar onSearch={manejarBusqueda} />
+        </div>
+
+        <h2 style={{ textAlign: 'center', color: '#ccc', fontSize: '1rem' }}>
+          Películas rentadas: {totalRentadas}
+        </h2>
+
+        <div className='catalogo'>
           {peliculasFiltradas.length > 0 ? (
             peliculasFiltradas.map((c) => (
               <Catalogo
@@ -110,13 +114,14 @@ function App() {
               />
             ))
           ) : (
-            <div style={{ width: '100%', textAlign: 'center', color: 'white', marginTop: '50px' }}>
-                <h2>No encontramos esa película </h2>
-                <p>Intenta buscando con otro nombre.</p>
+            <div style={{ width: '100%', textAlign: 'center', color: 'white', marginTop: '20px' }}>
+              <h2>No encontramos esa película </h2>
+              <p>Intenta buscando con otro nombre.</p>
             </div>
           )}
+        </div>
       </div>
-    </Layout> 
+    </Layout>
   )
 }
 
