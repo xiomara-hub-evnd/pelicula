@@ -40,3 +40,75 @@
 .read-the-docs {
   color: #888;
 }
+nav {
+  background-color: #141414; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+  position: sticky; 
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #E50914; 
+}
+
+form.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #333; 
+  padding: 5px 15px;
+  border-radius: 25px; 
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+form.search-container:focus-within {
+  background-color: #000;
+  border: 1px solid #E50914; 
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+#buscador {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  outline: none; 
+  width: 200px;
+  padding-right: 10px;
+}
+
+#buscador::placeholder {
+  color: #aaa;
+}
+
+form.search-container button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+form.search-container button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #E50914;
+}
